@@ -3,15 +3,15 @@
 Personal Homebrew casks and formulae maintained by [wbreiler](https://github.com/wbreiler).
 This is a third-party tap, separate from Homebrew's official repositories.
 
-## Add the tap
+## Add the tap (optional)
+
+GitHub repository: `wbreiler/homebrew-wbreiler`. Homebrew tap: `wbreiler/wbreiler`.
 
 ```sh
-brew tap wbreiler/taps https://github.com/wbreiler/taps
+brew tap wbreiler/wbreiler
 ```
 
-The explicit URL is needed because this repository is named `taps`, without
-Homebrew's conventional `homebrew-` prefix. Add the tap once before installing
-packages from it.
+The fully qualified installation command below also adds the tap automatically.
 
 ## Install Mineways
 
@@ -20,7 +20,7 @@ Requires an Apple Silicon Mac with macOS 15 Sequoia or later.
 The `wbreiler-mineways` token distinguishes the fork from upstream Mineways.
 
 ```sh
-brew install --cask wbreiler/taps/wbreiler-mineways
+brew install --cask wbreiler/wbreiler/wbreiler-mineways
 ```
 
 Homebrew installs `Mineways.app` in `/Applications`. If Mineways is already
@@ -40,13 +40,13 @@ To update:
 
 ```sh
 brew update
-brew upgrade --cask wbreiler/taps/wbreiler-mineways
+brew upgrade --cask wbreiler/wbreiler/wbreiler-mineways
 ```
 
 To remove:
 
 ```sh
-brew uninstall --cask wbreiler/taps/wbreiler-mineways
+brew uninstall --cask wbreiler/wbreiler/wbreiler-mineways
 ```
 
 Uninstall removes the app. It preserves preferences, worlds, and exported models.
@@ -63,8 +63,8 @@ After a new macOS release publishes successfully:
 
 ```sh
 brew style Casks/wbreiler-mineways.rb
-brew audit --cask --strict --online wbreiler/taps/wbreiler-mineways
-brew livecheck --cask wbreiler/taps/wbreiler-mineways
+brew audit --cask --strict --online wbreiler/wbreiler/wbreiler-mineways
+brew livecheck --cask wbreiler/wbreiler/wbreiler-mineways
 ```
 
 `livecheck` detects new releases. It does not update the cask automatically.
